@@ -178,7 +178,7 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
         <div
           className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-[1.15fr_0.85fr] md:items-center"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F0dfcfebaee034953b8b624f96050a900%2F0a7818fb62874c088de242361b2e3770?format=webp&width=800&height=1200')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F0dfcfebaee034953b8b624f96050a900%2F2ef1e039e6344fffaa9a45e58a61e4d3')`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover'
@@ -186,9 +186,35 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
         >
           <div>
             <p className="text-sm font-semibold uppercase text-emerald-700">Agenda deportiva UCN</p>
-            <h1 className="mt-3 max-w-3xl text-4xl font-bold text-slate-950 md:text-5xl">{title}</h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-700">{description}</p>
-            <p className="mt-3 max-w-2xl text-slate-600">
+            <h1
+              className="mt-3 text-4xl font-bold md:text-5xl"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 1)',
+                color: 'rgba(255, 255, 255, 1)',
+                maxWidth: '190px',
+                marginRight: 'auto'
+              }}
+            >
+              {title}
+            </h1>
+            <p
+              className="mt-4 text-lg"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 1)',
+                color: 'rgba(255, 255, 255, 1)',
+                maxWidth: '350px'
+              }}
+            >
+              {description}
+            </p>
+            <p
+              className="mt-3"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 1)',
+                color: 'rgba(255, 255, 255, 1)',
+                maxWidth: '350px'
+              }}
+            >
               Organiza partidos, revisa cupos y coordina canchas desde un solo lugar. Para participar en encuentros reales necesitas iniciar sesion.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
