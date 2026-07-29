@@ -262,17 +262,17 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
         </div>
       </section>
       <section className="mx-auto grid max-w-6xl gap-4 px-4 py-10 md:grid-cols-3">
-        <article className="rounded-md border border-slate-200 bg-white p-5">
-          <h2 className="text-lg font-bold text-slate-950">Encuentra partidos</h2>
-          <p className="mt-2 text-sm text-slate-600">Filtra por deporte, fecha y cupos disponibles para elegir donde participar.</p>
+        <article className="rounded-md border border-slate-200 bg-emerald-700 p-5">
+          <h2 className="text-lg font-bold text-white">Encuentra partidos</h2>
+          <p className="mt-2 text-sm text-white">Filtra por deporte, fecha y cupos disponibles para elegir donde participar.</p>
         </article>
-        <article className="rounded-md border border-slate-200 bg-white p-5">
-          <h2 className="text-lg font-bold text-slate-950">Crea encuentros</h2>
-          <p className="mt-2 text-sm text-slate-600">Publica horarios, cancha, deporte y cantidad de participantes desde la seccion de partidos.</p>
+        <article className="rounded-md border border-slate-200 bg-emerald-700 p-5">
+          <h2 className="text-lg font-bold text-white">Crea encuentros</h2>
+          <p className="mt-2 text-sm text-white">Publica horarios, cancha, deporte y cantidad de participantes desde la seccion de partidos.</p>
         </article>
-        <article className="rounded-md border border-slate-200 bg-white p-5">
-          <h2 className="text-lg font-bold text-slate-950">Controla inscripciones</h2>
-          <p className="mt-2 text-sm text-slate-600">Revisa si quedan cupos, cancela tu participacion o administra tus partidos creados.</p>
+        <article className="rounded-md border border-slate-200 bg-emerald-700 p-5">
+          <h2 className="text-lg font-bold text-white">Controla inscripciones</h2>
+          <p className="mt-2 text-sm text-white">Revisa si quedan cupos, cancela tu participacion o administra tus partidos creados.</p>
         </article>
       </section>
     </main>
