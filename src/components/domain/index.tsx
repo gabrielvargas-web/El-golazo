@@ -256,7 +256,7 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
               <span className="rounded-md border border-white px-4 py-2 text-sm font-semibold text-white" style={{ backgroundColor: '#045b78' }}>
                 Inscribirme
               </span>
-              <span className="rounded-md text-sm font-semibold text-white" style={{ backgroundColor: 'rgba(4, 91, 120, 1)' }}>
+              <span className="rounded-md text-sm font-semibold text-white" style={{ backgroundColor: 'rgba(4, 91, 120, 1)', maxWidth: '200px' }}>
                 Ver detalle
               </span>
             </div>
