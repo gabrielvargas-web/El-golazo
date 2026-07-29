@@ -185,7 +185,15 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
           }}
         >
           <div>
-            <p className="text-sm font-semibold uppercase text-emerald-700">Agenda deportiva UCN</p>
+            <p
+              className="text-sm font-semibold uppercase text-emerald-700"
+              style={{
+                fontStyle: 'italic',
+                color: 'rgba(255, 255, 255, 1)'
+              }}
+            >
+              Agenda deportiva UCN
+            </p>
             <h1
               className="mt-3 text-4xl font-bold md:text-5xl"
               style={{
