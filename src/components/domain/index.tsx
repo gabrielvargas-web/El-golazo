@@ -229,7 +229,7 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
               <Link className="rounded-md bg-emerald-700 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-800" href="/registro">
                 Registrarme
               </Link>
-              <Link className="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-50" href="/login">
+              <Link className="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800" href="/login">
                 Entrar
               </Link>
             </div>
