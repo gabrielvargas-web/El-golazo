@@ -238,6 +238,9 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
             aria-label="Iniciar sesion para inscribirte en partidos"
             className="group block rounded-md border border-slate-200 bg-slate-50 p-5 shadow-sm transition hover:border-emerald-300 hover:bg-emerald-50/60 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             href="/login"
+            style={{
+              color: 'rgba(4, 120, 87, 0.6)'
+            }}
           >
             <p className="text-xs font-semibold uppercase text-slate-500">Vista de ejemplo</p>
             <div className="mt-4 flex items-start justify-between gap-3">
