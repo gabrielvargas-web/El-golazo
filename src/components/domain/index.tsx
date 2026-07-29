@@ -239,28 +239,28 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
             className="group block rounded-md border border-slate-200 bg-slate-50 p-5 shadow-sm transition hover:border-emerald-300 hover:bg-emerald-50/60 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             href="/login"
             style={{
+              backgroundColor: 'rgba(4, 120, 87, 0.9)',
               color: 'rgba(4, 120, 87, 0.6)'
             }}
           >
-            <p className="text-xs font-semibold uppercase text-slate-500">Vista de ejemplo</p>
             <div className="mt-4 flex items-start justify-between gap-3">
               <div>
-                <h2 className="text-xl font-bold text-slate-950">{demoMatches[0].title}</h2>
-                <p className="text-sm text-slate-600">{demoMatches[0].sport} - {demoMatches[0].venue}</p>
+                <h2 className="text-xl font-bold text-white">{demoMatches[0].title}</h2>
+                <p className="text-sm text-white">{demoMatches[0].sport} - {demoMatches[0].venue}</p>
               </div>
               <MatchStatusBadge capacity={demoMatches[0].capacity} registered={demoMatches[0].registered} status={demoMatches[0].status} />
             </div>
-            <p className="mt-4 text-sm text-slate-700">{new Date(demoMatches[0].startsAt).toLocaleString("es-CL")}</p>
-            <AvailableSlots capacity={demoMatches[0].capacity} registered={demoMatches[0].registered} />
+            <p className="mt-4 text-sm text-white">{new Date(demoMatches[0].startsAt).toLocaleString("es-CL")}</p>
+            <AvailableSlots capacity={demoMatches[0].capacity} registered={demoMatches[0].registered} textColor="text-white" />
             <div className="mt-5 flex flex-wrap gap-2">
-              <span className="rounded-md bg-emerald-700 px-4 py-2 text-sm font-semibold text-white group-hover:bg-emerald-800">
+              <span className="rounded-md border border-white px-4 py-2 text-sm font-semibold text-white" style={{ backgroundColor: '#045b78' }}>
                 Inscribirme
               </span>
-              <span className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800">
+              <span className="rounded-md text-sm font-semibold text-white" style={{ backgroundColor: 'rgba(4, 91, 120, 1)' }}>
                 Ver detalle
               </span>
             </div>
-            <p className="mt-4 text-sm font-medium text-emerald-800">Inicia sesion para activar esta accion.</p>
+            <p className="mt-4 text-sm font-medium text-white">Inicia sesion para activar esta accion.</p>
           </Link>
         </div>
       </section>
@@ -779,14 +779,17 @@ function AttendeesModalButton({ matchId, title }: { matchId: string; title: stri
   );
 }
 
-export function AvailableSlots({ capacity = 10, registered = 4 }: { capacity?: number; registered?: number }) {
-  return <p className="mt-3 text-sm font-medium text-slate-800">Cupos disponibles: {Math.max(capacity - registered, 0)} de {capacity}</p>;
+export function AvailableSlots({ capacity = 10, registered = 4, textColor = "text-slate-800" }: { capacity?: number; registered?: number; textColor?: string }) {
+  return <p className={`mt-3 text-sm font-medium ${textColor}`}>Cupos disponibles: {Math.max(capacity - registered, 0)} de {capacity}</p>;
 }
 
 export function MatchStatusBadge({ capacity = 10, registered = 4, status = "scheduled" }: { capacity?: number; registered?: number; status?: string }) {
   if (status === "cancelled") return <span className="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Cancelado</span>;
   const availability = getMatchAvailability(capacity, registered);
-  const color = availability === "Completo" ? "bg-red-100 text-red-800" : availability === "Ultimos cupos" ? "bg-amber-100 text-amber-900" : "bg-emerald-100 text-emerald-800";
+  if (availability === "Ultimos cupos") {
+    return <span className="rounded-full px-3 py-1 text-xs font-semibold" style={{ backgroundColor: 'rgba(255, 202, 10, 1)', color: '#1a1a1a' }}>{availability}</span>;
+  }
+  const color = availability === "Completo" ? "bg-red-100 text-red-800" : "bg-emerald-100 text-emerald-800";
   return <span className={"rounded-full px-3 py-1 text-xs font-semibold " + color}>{availability}</span>;
 }
 
