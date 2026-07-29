@@ -175,7 +175,15 @@ export function DomainLanding({ title, description, isAuthenticated = false }: {
   return (
     <main>
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-[1.15fr_0.85fr] md:items-center">
+        <div
+          className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-[1.15fr_0.85fr] md:items-center"
+          style={{
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F0dfcfebaee034953b8b624f96050a900%2F0a7818fb62874c088de242361b2e3770?format=webp&width=800&height=1200')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}
+        >
           <div>
             <p className="text-sm font-semibold uppercase text-emerald-700">Agenda deportiva UCN</p>
             <h1 className="mt-3 max-w-3xl text-4xl font-bold text-slate-950 md:text-5xl">{title}</h1>
