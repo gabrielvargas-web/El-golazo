@@ -26,7 +26,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 <>
                   <Link className="text-slate-700 hover:text-slate-950" href="/dashboard">Partidos</Link>
                   <details className="relative">
-                    <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 font-semibold text-slate-800 hover:bg-slate-50">
+                    <summary className="cursor-pointer list-none rounded-md border border-blue-900 bg-blue-500 px-3 py-2 font-semibold text-slate-800 hover:bg-slate-50">
                       Perfil
                     </summary>
                     <div className="absolute right-0 z-20 mt-2 grid min-w-40 gap-1 rounded-md border border-slate-200 bg-white p-2 shadow-lg">
