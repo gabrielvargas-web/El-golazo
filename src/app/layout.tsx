@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 </>
               ) : (
                 <>
-                  <Link className="rounded-md border border-slate-300 px-3 py-2 text-slate-800 hover:bg-slate-50" href="/login">Entrar</Link>
+                  <Link className="rounded-md border border-slate-300 px-3 py-2 bg-emerald-700 text-white hover:bg-emerald-800" href="/login">Entrar</Link>
                   <Link className="rounded-md bg-emerald-700 px-3 py-2 font-semibold text-white hover:bg-emerald-800" href="/registro">Registrarme</Link>
                 </>
               )}
