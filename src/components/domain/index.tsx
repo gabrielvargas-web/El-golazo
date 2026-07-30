@@ -291,7 +291,7 @@ export function DomainDashboard() {
       <section className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-3xl font-bold text-slate-950">Partidos</h1>
-          <p className="mt-1 text-sm text-slate-600">Crea encuentros, revisa tus inscripciones y encuentra cupos disponibles.</p>
+          <p className="mt-1 text-sm" style={{ color: "rgba(0, 0, 0, 1)" }}>Crea encuentros, revisa tus inscripciones y encuentra cupos disponibles.</p>
         </div>
         <Button type="button" onClick={() => setCreateOpen(true)}>Crear partido</Button>
       </section>
