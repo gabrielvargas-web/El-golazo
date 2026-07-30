@@ -307,7 +307,8 @@ export function DomainDashboard() {
       <MatchList title="Partidos disponibles" refreshKey={refreshKey} />
     </div>
   );
-}
+} 
+
 
 export function AdminPanel() {
   return (
