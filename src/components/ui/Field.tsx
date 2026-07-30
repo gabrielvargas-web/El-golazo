@@ -35,7 +35,7 @@ export function SelectField({ label, children, className = "", ...props }: Selec
   return (
     <label className="grid gap-1 text-sm font-medium text-slate-800">
       <span>{label}</span>
-      <select className={"rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-950 shadow-sm focus:border-emerald-700 " + className} {...props}>
+      <select className={"rounded-md border border-slate-300 px-3 py-2 text-slate-950 shadow-sm focus:border-emerald-700 " + className} style={{ backgroundColor: "rgba(74, 144, 226, 1)" }} {...props}>
         {children}
       </select>
     </label>
