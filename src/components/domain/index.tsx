@@ -291,7 +291,7 @@ export function DomainDashboard() {
       <section className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-3xl font-bold text-slate-950">Partidos</h1>
-          <p className="mt-1 text-sm text-slate-600">Crea encuentros, revisa tus inscripciones y encuentra cupos disponibles.</p>
+          <p className="mt-1 text-sm" style={{ color: "rgba(0, 0, 0, 1)" }}>Crea encuentros, revisa tus inscripciones y encuentra cupos disponibles.</p>
         </div>
         <Button type="button" onClick={() => setCreateOpen(true)}>Crear partido</Button>
       </section>
@@ -394,7 +394,7 @@ export function MatchList({ title = "Partidos disponibles", mode = "available", 
         <SportFilter options={sportOptions} value={sport} onChange={setSport} />
         <DateRangeFilter value={dateFilter} onChange={setDateFilter} />
       </div>
-      <h2 className="text-2xl font-bold">{title}</h2>
+      <h2 className="text-2xl font-bold rounded-md px-3 py-2" style={{ color: "rgba(255, 255, 255, 1)", backgroundColor: "rgba(21, 45, 78, 1)", marginRight: "auto", borderWidth: "1px", borderRadius: "6px", borderColor: "rgba(21, 45, 78, 1)", overflow: "hidden" }}>{title}</h2>
       {loading ? <p className="text-sm text-slate-600">Cargando partidos...</p> : null}
       {paginated.length ? (
         <div className="grid gap-4 md:grid-cols-2">
