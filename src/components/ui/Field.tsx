@@ -33,9 +33,9 @@ export function TextareaField({ label, error, className = "", ...props }: Textar
 
 export function SelectField({ label, children, className = "", ...props }: SelectHTMLAttributes<HTMLSelectElement> & { label: string; name: string }) {
   return (
-    <label className="grid gap-1 text-sm font-medium text-slate-800">
-      <span>{label}</span>
-      <select className={"rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-950 shadow-sm focus:border-emerald-700 " + className} {...props}>
+    <label className="grid gap-1 text-sm font-medium">
+      <span style={{ backgroundColor: "rgba(21, 45, 78, 1)", borderWidth: "1px", borderColor: "rgba(74, 144, 226, 1)", borderRadius: "6px", overflow: "hidden", marginRight: "auto", color: "rgba(255, 255, 255, 1)", padding: "0.5rem 0.75rem" }}>{label}</span>
+      <select className={"rounded-md border border-slate-300 px-3 py-2 text-slate-950 shadow-sm focus:border-emerald-700 " + className} style={{ backgroundColor: "rgba(74, 144, 226, 1)" }} {...props}>
         {children}
       </select>
     </label>
